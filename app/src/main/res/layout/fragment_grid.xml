@@ -47,7 +47,6 @@
                 android:clickable="true"
                 app:searchHintIcon="@null"
                 app:searchIcon="@null"
-                app:closeIcon="@null"
                 android:layout_height="wrap_content"/>
         </RelativeLayout>
 

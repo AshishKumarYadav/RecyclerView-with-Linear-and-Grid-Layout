@@ -40,7 +40,6 @@ public class GridFragment extends Fragment implements RecyclerViewAdapter.OnSear
         list=new ArrayList<>();
         list=(ArrayList<Items>)getArguments().getSerializable("data");
 
-        Log.d(TAG,"Data "+list.size()+" , "+list);
 
 
     }
@@ -69,6 +68,7 @@ public class GridFragment extends Fragment implements RecyclerViewAdapter.OnSear
         adapter.setVIEW_TYPE(1);
         recyclerView.setAdapter(adapter);
 
+        searchView.setFocusable(false);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {

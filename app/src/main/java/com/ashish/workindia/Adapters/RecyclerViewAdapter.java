@@ -9,13 +9,10 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.ashish.workindia.Model.Items;
 import com.ashish.workindia.R;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -113,7 +110,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return new Filter() {
             @Override
             protected FilterResults performFiltering(CharSequence charSequence) {
-                String charString = charSequence.toString().trim();
+                String charString = charSequence.toString().trim().replace(" ","");
                 if (charString.isEmpty()) {
                     itemFilteredList = list;
                 } else {
@@ -122,8 +119,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
                         // name match condition. this might differ depending on your requirement
                         // here we are looking for name or phone number match
-
-                        if (row.getName().trim().toLowerCase().contains(charString.toLowerCase())) {
+                        if (row.getName().toLowerCase().trim().replace(" ","").contains(charString.toLowerCase())) {
                             filteredList.add(row);
 
                         }
