@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/screen_one"
+        android:icon="@drawable/ic_baseline_circle"
+        android:title="Screen One" />
+
+    <item
+        android:id="@+id/screen_two"
+        android:icon="@drawable/ic_baseline_circle"
+        android:title="Screen Two" />
+</menu>
